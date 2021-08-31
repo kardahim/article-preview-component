@@ -6,6 +6,7 @@
 
     --fs-p: 16px;
     --fs-h: 25px;
+    --fs-h-m: 19px;
     --fs-s: 13px;
     --fw-500: 500;
     --fw-700: 700;
@@ -37,6 +38,7 @@ main {
     width: 900px;
     border-radius: 10px;
     display: flex;
+    position: relative;
 }
 
 .image-holder {
@@ -148,6 +150,25 @@ article p {
     bottom: -15px;
     left: 110px;
  }
+
+ .bubble-mobile {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background: var(--c1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    bottom: 0;
+    color: var(--c3);
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+ }
+
+ .bubble-mobile div > img {
+     margin-left: 20px;
+ }
  
 
 svg {
@@ -171,4 +192,67 @@ svg path {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width:1023px) {
+    main {
+        flex-direction: column;
+        height: 610px;
+        width: 80%;
+    }
+    .image-holder,
+    article {
+        width: 100%;
+    }
+
+    .image-holder {
+        height: 40%;
+    }
+
+    .image-holder img {
+        object-position: left -20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0; 
+    }
+
+    article h1 {
+        font-size: var(--fs-h-m);
+    }
+
+    article p {
+        color: var(--c2);
+        font-size: var(--fs-p);
+        line-height: 1.5;
+        margin: 10px 0 50px;
+    }
+
+     .bubble:after {
+        display: none;
+     }
+
+     .share {
+         height: 35.98px;
+         width: 35.98px;
+     }
+
+     svg path {
+        transform: scale(1.5);
+    }
+
+    .attribution {
+        left: 25%;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    main {
+        height: 710px;
+        width: 90%;
+    }
+
+    .attribution {
+        left: 15%;
+    }
 }

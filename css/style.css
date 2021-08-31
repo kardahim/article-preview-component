@@ -1,0 +1,172 @@
+:root {
+    --c1: hsl(217, 19%, 35%);
+    --c2: hsl(214, 17%, 51%);
+    --c3: hsl(212, 23%, 69%);
+    --c4: hsl(210, 46%, 95%);
+
+    --fs-p: 16px;
+    --fs-h: 25px;
+    --fs-s: 13px;
+    --fw-500: 500;
+    --fw-700: 700;
+    --ff: font-family: 'Manrope', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--c4);
+    font-family: var(--ff);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    background-color: white;
+    height: 350px;
+    width: 900px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.image-holder {
+    width: 40%;
+}
+
+.image-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+article {
+    width: 60%;
+    padding: 50px;
+}
+
+article h1 {
+    color: var(--c1);
+    font-weight: var(--fw-700);
+    font-size: var(--fs-h);
+    line-height: 1.4;
+    
+}
+
+article p {
+    color: var(--c2);
+    font-size: var(--fs-p);
+    line-height: 1.5;
+    margin: 10px 0 20px;
+}
+.author,
+.michelle,
+.michelle div {
+    display: flex;
+}
+
+.michelle div {
+    flex-direction: column;
+    margin-left: 15px;
+    justify-content: center;
+}
+
+.michelle span:nth-child(1) {
+    color: var(--c1);
+    font-weight: var(--fw-700);
+}
+
+.michelle span:nth-child(2) {
+    color: var(--c3);
+    margin-top: 5px;
+}
+
+.author {
+    justify-content: space-between;
+}
+
+.michelle img {
+    width: 15%;
+    border-radius: 100%;
+}
+
+.share {
+    width: 48.98px;
+    border-radius: 100%;
+    background-color: var(--c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bubble {
+    position: absolute;
+    width: 250px;
+    height: 60px;
+    text-align: center;
+    background: var(--c1);
+    border-radius: 10px;
+    top: -90px;
+    color: var(--c3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .bubble img {
+     margin-left: 15px;
+ }
+
+ .bubble span {
+     letter-spacing: 3px;
+     font-size: var(--fs-s);
+     margin-top: 5px;
+ }
+ 
+ .bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 15px 15px 0;
+    border-color: var(--c1) transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: -15px;
+    left: 110px;
+ }
+ 
+
+svg {
+    width: 27px;
+    height: auto;
+    cursor: pointer;
+}
+
+svg path {
+    transform: scale(1.8);
+}
+
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    left: 45%;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
